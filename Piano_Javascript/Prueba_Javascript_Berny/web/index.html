@@ -18,8 +18,13 @@
             display: flex;
             align-items: center;
             height: 300px;
-            padding-top: 200px;
+            margin-top: 160px;
+            padding-left: 50px;
+            padding-bottom: 50px;
+            padding-top: 50px;
             border-color: black;
+            border-radius: 25px 25px 25px 25px;
+            background-image: url('mad2.png');
         }
 
         .nota {
@@ -28,18 +33,74 @@
             background-image: url('asdd.jpg');
             height: 300px;
             position: relative;
+            border-radius: 10px 10px 5px 5px;
+
         }
 
+        /*nth-child gg :c  */
         .nota2 {
             position: absolute;
-            width: 30px;
+            width: 26px;
             cursor: pointer;
-            background-color: black;
-            height: 170px;
+            background-image: url('tec.jpg');
+            height: 180px;
             border-color: antiquewhite;
             border-width: 220px;
             margin-left: 50px;
-            margin-top: -65px;
+            margin-top: -60px;
+        }
+        .nota3 {
+            position: absolute;
+            width: 26px;
+            cursor: pointer;
+            background-image: url('tec.jpg');
+            height: 180px;
+            border-color: antiquewhite;
+            border-width: 220px;
+            margin-left: 114px;
+            margin-top: -60px;
+        }
+        .nota4 {
+            position: absolute;
+            width: 26px;
+            background-image: url('tec.jpg');
+            height: 180px;
+            border-color: antiquewhite;
+            border-width: 220px;
+            margin-left: 245px;
+            margin-top: -60px;
+        }
+        .nota5 {
+            position: absolute;
+            width: 26px;
+            background-image: url('tec.jpg');
+            height: 180px;
+            border-color: antiquewhite;
+            border-width: 220px;
+            margin-left: 310px;
+            margin-top: -60px;
+        }
+        .nota6 {
+            position: absolute;
+            width: 26px;
+            background-image: url('tec.jpg');
+            height: 180px;
+            border-color: antiquewhite;
+            border-width: 220px;
+            margin-left: 375px;
+            margin-top: -60px;
+        }
+        .nota7 {
+            position: absolute;
+            width: 26px;
+            background-image: url('tec.jpg');
+            height: 180px;
+            border-color: antiquewhite;
+            border-width: 220px;
+            margin-left: 490px;
+            margin-top: -60px;
+            border-radius: 0px 10px 0px 0px;
+
         }
 
         .letritas {
@@ -50,35 +111,36 @@
 
         .center {
             display: flex;
-            justify-content: center;
             align-items: center;
         }
 
     </style>
     <body>
         <div id="contenedor">
-            <div class="nota center letritas" id="0">DO</div>
-            <div class="nota center letritas" id="1">RE L</div>
-            <div class="nota center letritas" id="2">MI</div>
-            <div class="nota center letritas" id="3">FA</div>
-            <div class="nota center letritas" id="4">SOL</div>
-            <div class="nota center letritas" id="5">LA</div>
-            <div class="nota center letritas" id="6">SI</div>
+            <div class="nota center letritas" id="0">DO</div>-
+            <div class="nota center letritas" id="1">RE</div>-
+            <div class="nota center letritas" id="2">MI</div>-
+            <div class="nota center letritas" id="3">FA</div>-
+            <div class="nota center letritas" id="4">SOL</div>-
+            <div class="nota center letritas" id="5">LA</div>-
+            <div class="nota center letritas" id="6">SI</div>-
             <div class="nota center letritas" id="7">DO</div>
-            <div class="nota2 center letritas" id="0">DO</div>
-            <div class="nota2 center letritas" id="0">DO</div>
-            <div class="nota2 center letritas" id="0">DO</div>
-            <div class="nota2 center letritas" id="0">DO</div>
-
+            <div class="nota2" id="11">DO</div>
+            <div class="nota3" id="12">DO</div>
+            <div class="nota4" id="13"></div>
+            <div class="nota5" id="14"></div>
+            <div class="nota6" id="15"></div>
+            <div class="nota7" id="16"></div>
         </div>
-        <audio class="sonidos" src="60.mp3"></audio>
-        <audio class="sonidos" src="50.mp3"></audio>
-        <audio class="sonidos" src="50.mp3"></audio>
-        <audio class="sonidos" src="60.mp3"></audio>
-        <audio class="sonidos" src="70.mp3"></audio>
-        <audio class="sonidos" src="80.mp3"></audio>
-        <audio class="sonidos" src="90.mp3"></audio>
-        <audio class="sonidos" src="90.mp3"></audio>
+
+        <audio class="sonidos" src="do.wav"></audio>
+        <audio class="sonidos" src="re.wav"></audio>
+        <audio class="sonidos" src="mi.wav"></audio>
+        <audio class="sonidos" src="fa.wav"></audio>
+        <audio class="sonidos" src="sol.wav"></audio>
+        <audio class="sonidos" src="la.wav"></audio>
+        <audio class="sonidos" src="si.wav"></audio>
+        <audio class="sonidos" src="do_octa.wav"></audio>
 
     </body>
     <script>
@@ -86,7 +148,7 @@
         var notas = $('.sonidos');
 
         $('.nota').click(function () {
-            let num = parseInt(this.id);
+            var num = parseInt(this.id);
             tocar(num);
         });
 
